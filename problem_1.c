@@ -47,10 +47,9 @@ int main(){
 
 	char *buffer;
 	int bufsize = 5;
-	int namesize = 256;
 	buffer = (char*)malloc((bufsize+1) * sizeof(char));
 
-	printf("Enter 5-bit string: ");
+	printf("Enter %d-bit string: ", bufsize);
 	fgets(buffer, bufsize+1, stdin);
 	sleep(1);
 
@@ -70,7 +69,7 @@ int main(){
 	}
 	else{ // child
 		int j = 0;
-		int message[5];
+		int message[bufsize];
 		printf("Child sleeping to ensure parent goes first... \n");
 		sleep(1);
 		for(j; j < bufsize; j++){
