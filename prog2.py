@@ -3,7 +3,7 @@
 # Mano Wared 913398346
 # Patrick Ong 997520004
 
-count = 30
+count = 5
 while count :
     x = float (input('What time do you wake up? ' ))
     if x < 8:

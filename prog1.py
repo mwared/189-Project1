@@ -3,7 +3,7 @@
 # Mano Wared 913398346
 # Patrick Ong 997520004
 
-count = 30
+count = 5
 while count :
     classes = float (input('How many classes do you have today? ' ))
     if classes > 2:

