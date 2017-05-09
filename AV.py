@@ -1,12 +1,14 @@
+# AV.py
+# simple antivirus to combat the original pythonVirus.py
+# Mano Wared 913398346
+# Patrick Ong 997520004
+
 import os
 import datetime
 import random, array
 
 SIGNATURE = "CRANKLIN PYTHON VIRUS"
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 def search(path):
     filestoinfect = []
     filelist = os.listdir(path)
@@ -16,7 +18,7 @@ def search(path):
         elif fname[-3:] == ".py":
             infected = False
             for line in open(path+"/"+fname):
-                if SIGNATURE in line:
+                if SIGNATURE in line and fname != "AV.py":
                     infected = True
                     break
             if infected == True:
@@ -25,7 +27,4 @@ def search(path):
 
 filestoinfect = search(os.path.abspath("/home/prong/Documents/ECS189m/project1"))
 for fname in filestoinfect:
-    print ("kjhkjh")
-    print (fname)
-
-	
+    print ("File found: " + fname)

@@ -1,3 +1,11 @@
+/*
+// problem_1.c
+// implements a covert channel between two processes
+// channel relies on changing the permission bits of testfile
+// Mano Wared 913398346
+// Patrick Ong 997520004
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
