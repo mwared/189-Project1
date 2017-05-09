@@ -3,10 +3,6 @@ import datetime
 import random, array
 
 SIGNATURE = "CRANKLIN PYTHON VIRUS"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 def search(path):
     filestoinfect = []
     filelist = os.listdir(path)
@@ -22,10 +18,8 @@ def search(path):
             if infected == True:
                 filestoinfect.append(path+"/"+fname)
     return filestoinfect
-
 filestoinfect = search(os.path.abspath("/home/prong/Documents/ECS189m/project1"))
 for fname in filestoinfect:
-    print ("kjhkjh")
     print (fname)
 
 	
